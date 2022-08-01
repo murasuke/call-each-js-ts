@@ -5,6 +5,7 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "outDir": "./public"
   },
   "exclude": [
     "node_modules"

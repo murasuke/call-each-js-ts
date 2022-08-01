@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+    <div id="app">
+      <button onclick="ts_call_js()">ts_call_js</button><br />
+      <button onclick="ts_call_ts()">ts_call_ts</button><br />
+    </div>
+    <script src="jslib/jslib.js"></script>
+    <!-- importしているjsソースは「type="module"」が必要 -->
+    <!-- 内部でimportしている「tslib.js」は<script>タグでの読み込みは不要(ESModuleの場合、ブラウザが動的に読み込む) -->
+    <script type="module" src="ts_call_js.js" ></script>
+    <script type="module" src="ts_call_ts.js" ></script>
+  </body>
+</html>

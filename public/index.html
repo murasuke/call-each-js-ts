@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <body>
-    <div id="app">
-      <button onclick="js_call_js()">js_call_js</button><br />
-      <button onclick="js_call_ts()">js_call_ts</button><br />
-      <button onclick="ts_call_js()">ts_call_js</button><br />
-      <button onclick="ts_call_ts()">ts_call_ts</button><br />
-    </div>
-    <script src="jslib/jslib.js"></script>
-    <script src="jssrc.js"></script>
-
-    <!-- importしているjsソースは「type="module"」が必要 -->
-    <!-- 内部でimportしている「tslib.js」は<script>タグでの読み込みは不要(ESModuleの場合、ブラウザが動的に読み込む) -->
-    <script type="module" src="tssrc.js" ></script>
-
-  </body>
+  <div>
+    <a href="./js_call_ts.html">jsからtsの関数を呼び出すサンプル</a>
+  </div>
+  <div>
+    <a href="./ts_call_js.html">tsからjsの関数を呼び出すサンプル</a>
+  </div>
+</body>
 </html>

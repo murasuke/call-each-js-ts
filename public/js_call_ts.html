@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+    <div id="app">
+      <button onclick="js_call_js()">js_call_js</button><br />
+      <button onclick="js_call_ts()">js_call_ts</button><br />
+    </div>
+    <script src="jslib/jslib.js"></script>
+    <!-- importしているjsソースは「type="module"」が必要 -->
+    <!-- 内部でimportしている「tslib.js」は<script>タグでの読み込みは不要(ESModuleの場合、ブラウザが動的に読み込む) -->
+    <script type="module" src="tslib/tslib.js" ></script>
+
+    <script >
+      // jsからjsの関数を呼び出す
+      function js_call_js(e) {
+        console.log("js_call_js");
+        console.log("jsAddFunc(1,2):", jsAddFunc(1, 2));
+      }
+
+      // jsからtsの関数を呼び出す
+      //  ⇒対象のjsファイルが<script>タグで読み込まれる、もしくはimportで読み込まれている
+      //    かつ、windowのプロパティとしてグローバルにアクセス可能な場合は呼び出し可能
+      const js_call_ts = (e) => {
+        console.log("js_call_ts");
+        console.log("tsAddFunc(3,4):", tsAddFunc(3, 4));
+      };
+    </script>
+  </body>
+</html>
